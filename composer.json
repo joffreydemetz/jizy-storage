@@ -1,7 +1,7 @@
 {
     "name": "jdz/jizy-storage",
     "type": "library",
-    "description": "A simple JS storage library",
+    "description": "A simple JS storage proxy",
     "keywords": [
         "JDZ",
         "Storage"
