@@ -1,0 +1,19 @@
+{
+    "name": "jdz/jizy-storage",
+    "type": "library",
+    "description": "A simple JS storage library",
+    "keywords": [
+        "JDZ",
+        "Storage"
+    ],
+    "homepage": "https://jdz.joffreydemetz.com/jizystorage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joffrey Demetz",
+            "email": "joffrey.demetz@gmail.com",
+            "homepage": "https://joffreydemetz.com",
+            "role": "Lead"
+        }
+    ]
+}
