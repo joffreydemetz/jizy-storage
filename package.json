@@ -1,6 +1,6 @@
 {
   "name": "jizy-storage",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "browser": "dist/jizy-storage.min.js",
   "main": "lib/index.js",
   "type": "module",
