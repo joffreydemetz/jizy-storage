@@ -1,31 +1,25 @@
-import fs from 'fs';
-import path from 'path';
-import {
-    jPackConfig,
-    LogMe
-} from "../jpack/utils.js";
+//import fs from 'fs';
+//import path from 'path';
+//import { LogMe, jPackConfig, removeEmptyDirs } from 'jizy-packer';
 
-const currentPath = path.dirname(import.meta.url);
-
-jPackConfig.init({
+const jPackData = {
     name: 'jStorage',
     alias: 'jizy-storage',
     cfg: 'storage',
     assetsPath: 'dist',
-    checkConfig: (config) => {
-        return config;
-    },
-    genBuildJs: (code, config) => {
-        return code;
-    },
-    onPacked: (config) => {
-        const target = jPackConfig.get('assetsPath');
 
-        // move the .min.js file in dist/js/ to dist/
-        LogMe.log('Move minified JS file to dist root');
-        const minJsFile = path.join(target, 'js', `${jPackConfig.get('alias')}.min.js`);
-        if (fs.existsSync(minJsFile)) {
-            fs.renameSync(minJsFile, path.join(target, `${jPackConfig.get('alias')}.min.js`));
-        }
-    }
-});
+    buildTarget: null,
+    buildZip: false,
+    buildName: 'default',
+
+    onCheckConfig: () => { },
+
+    onGenerateBuildJs: (code) => code,
+
+    onGenerateWrappedJs: (wrapped) => wrapped,
+
+    onPacked: () => { }
+};
+
+export default jPackData;
+
