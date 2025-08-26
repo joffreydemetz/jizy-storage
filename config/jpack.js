@@ -1,25 +1,15 @@
-//import fs from 'fs';
-//import path from 'path';
-//import { LogMe, jPackConfig, removeEmptyDirs } from 'jizy-packer';
+import { jPackConfig } from 'jizy-packer';
 
-const jPackData = {
-    name: 'jStorage',
-    alias: 'jizy-storage',
-    cfg: 'storage',
-    assetsPath: 'dist',
+const jPackData = function () {
+    jPackConfig.sets({
+        name: 'jStorage',
+        alias: 'jizy-storage',
+    });
 
-    buildTarget: null,
-    buildZip: false,
-    buildName: 'default',
-
-    onCheckConfig: () => { },
-
-    onGenerateBuildJs: (code) => code,
-
-    onGenerateWrappedJs: (wrapped) => wrapped,
-
-    onPacked: () => { }
+    jPackConfig.set("onCheckConfig", () => { });
+    jPackConfig.set("onGenerateBuildJs", (code) => code);
+    jPackConfig.set("onGenerateWrappedJs", (wrapped) => wrapped);
+    jPackConfig.set("onPacked", () => { });
 };
 
 export default jPackData;
-
