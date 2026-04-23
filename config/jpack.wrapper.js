@@ -1,4 +1,3 @@
-/*! jStorage v@VERSION | @DATE | [@BUNDLE] */
 (function (global) {
     "use strict";
 
