@@ -11,7 +11,7 @@
 ## Usage
 
 ```js
-import jStorage from './lib/js/storage.js';
+import jStorage from 'jizy-storage';
 
 // Use localStorage
 const store = new jStorage('local');
